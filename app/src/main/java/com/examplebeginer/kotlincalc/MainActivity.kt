@@ -18,33 +18,91 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var player1Turn = false;
+
         //val button = findViewById(R.id.theOnlyButton)
         val button = findViewById<Button>(R.id.onlyButton)
+
+        val square0 = findViewById<Button>(R.id.B0)
+        val square1 = findViewById<Button>(R.id.B1)
+
+        //uncommenting this will make app to crash why though?
+        val square2 = findViewById<Button>(R.id.B2)
 
         button.setOnClickListener {
             val builder = AlertDialog.Builder(this)
 
-            builder.setTitle(R.string.dialogTitle)
+            player1Turn = !player1Turn;
 
-            builder.setMessage(R.string.dialogMessage)
+            builder.setTitle("console.log.alert")
 
-            builder.setIcon(android.R.drawable.ic_dialog_alert)
+            Toast.makeText(this@MainActivity, "$player1Turn", Toast.LENGTH_LONG).show()
 
-            //performing positive action
-            builder.setPositiveButton("Yes") {
-                dialogInterface, which -> Toast.makeText(applicationContext, "clicked yes", Toast.LENGTH_LONG).show()
-            }
-            
-            //perorming cancel action
-            builder.setNeutralButton("Cancel"){
-                dialogInterface, which -> Toast.makeText(applicationContext, "clicked cancel\n operation cancel", Toast.LENGTH_LONG).show()
-            }
-            
-            //performing negative actoin 
-            builder.setNegativeButton("No") {
-                DialogInterface, which -> Toast.makeText(applicationContext, "clicked No", Toast.LENGTH_LONG).show()
+            builder.setMessage("$player1Turn")
 
-            }
+            builder.setPositiveButton("Ight", null)
+
+
+            //Create the alertDialog
+            val alertDialog: AlertDialog = builder.create()
+
+            //set other dialog properties
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+
+        square0.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle("console.log.alert")
+
+            Toast.makeText(this@MainActivity, "AWEF", Toast.LENGTH_LONG).show()
+
+            builder.setMessage("AWEGDSVKJH")
+
+            builder.setPositiveButton("Ight", null)
+
+
+            //Create the alertDialog
+            val alertDialog: AlertDialog = builder.create()
+
+            //set other dialog properties
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+
+        square1.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle("console.log.alert")
+
+            Toast.makeText(this@MainActivity, "AWEF", Toast.LENGTH_LONG).show()
+
+            builder.setMessage("AWEGDSVKJH")
+
+            builder.setPositiveButton("Ight", null)
+
+
+            //Create the alertDialog
+            val alertDialog: AlertDialog = builder.create()
+
+            //set other dialog properties
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+
+        square2.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle("console.log.alert")
+
+            Toast.makeText(this@MainActivity, "AWEF", Toast.LENGTH_LONG).show()
+
+            builder.setMessage("AWEGDSVKJH")
+
+            builder.setPositiveButton("Ight", null)
+
+
             //Create the alertDialog
             val alertDialog: AlertDialog = builder.create()
 
