@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
 
+import java.util.Arrays
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,40 +27,39 @@ class MainActivity : AppCompatActivity() {
 
         val square0 = findViewById<Button>(R.id.B0)
         val square1 = findViewById<Button>(R.id.B1)
-
-        //uncommenting this will make app to crash why though?
         val square2 = findViewById<Button>(R.id.B2)
 
-        button.setOnClickListener {
-            val builder = AlertDialog.Builder(this)
+        val square3 = findViewById<Button>(R.id.B3)
+        val square4 = findViewById<Button>(R.id.B4)
+        val square5 = findViewById<Button>(R.id.B5)
+
+        val square6 = findViewById<Button>(R.id.B6)
+        val square7 = findViewById<Button>(R.id.B7)
+        val square8 = findViewById<Button>(R.id.B8)
+
+        var player1 = arrayOfNulls<Int>(5)
+        var player2 = arrayOfNulls<Int>(5)
+
+        square0.setOnClickListener {
+
+
+            if(player1Turn) {
+                player1[0] = 0;
+                square0.text = "O"
+            } else {
+                player2[0] = 0;
+                square0.text = "x"
+            }
 
             player1Turn = !player1Turn;
 
-            builder.setTitle("console.log.alert")
-
-            Toast.makeText(this@MainActivity, "$player1Turn", Toast.LENGTH_LONG).show()
-
-            builder.setMessage("$player1Turn")
-
-            builder.setPositiveButton("Ight", null)
-
-
-            //Create the alertDialog
-            val alertDialog: AlertDialog = builder.create()
-
-            //set other dialog properties
-            alertDialog.setCancelable(false)
-            alertDialog.show()
-        }
-
-        square0.setOnClickListener {
             val builder = AlertDialog.Builder(this)
 
             builder.setTitle("console.log.alert")
 
-            Toast.makeText(this@MainActivity, "AWEF", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@MainActivity, "$player1", Toast.LENGTH_LONG).show()
 
-            builder.setMessage("AWEGDSVKJH")
+            builder.setMessage(Arrays.toString(player1))
 
             builder.setPositiveButton("Ight", null)
 
@@ -111,8 +112,219 @@ class MainActivity : AppCompatActivity() {
             alertDialog.show()
         }
 
+        //3
+        square3.setOnClickListener {
+
+            if(player1Turn) {
+                player1[3] = 3;
+                square3.text = "O"
+            } else {
+                player2[3] = 3;
+                square3.text = "x"
+            }
+
+            player1Turn = !player1Turn;
+
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle("console.log.alert")
+
+            Toast.makeText(this@MainActivity, "$player1", Toast.LENGTH_LONG).show()
+
+            builder.setMessage(Arrays.toString(player1))
+
+            builder.setPositiveButton("Ight", null)
 
 
+            //Create the alertDialog
+            val alertDialog: AlertDialog = builder.create()
+
+            //set other dialog properties
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+
+        //4
+        square4.setOnClickListener {
+
+            if(player1Turn) {
+                player1[4] = 4;
+                square4.text = "O"
+            } else {
+                player2[4] = 4;
+                square4.text = "x"
+            }
+
+            player1Turn = !player1Turn;
+
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle("console.log.alert")
+
+            Toast.makeText(this@MainActivity, "$player1", Toast.LENGTH_LONG).show()
+
+            builder.setMessage(Arrays.toString(player1))
+
+            builder.setPositiveButton("Ight", null)
+
+
+            //Create the alertDialog
+            val alertDialog: AlertDialog = builder.create()
+
+            //set other dialog properties
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+
+        //5
+        //error onclick
+        square5.setOnClickListener {
+
+            if(player1Turn) {
+                player1[5] = 5;
+                square5.text = "O"
+            } else {
+                player2[5] = 5;
+                square5.text = "x"
+            }
+
+            player1Turn = !player1Turn;
+
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle("console.log.alert")
+
+            Toast.makeText(this@MainActivity, "$player1", Toast.LENGTH_LONG).show()
+
+            builder.setMessage("fuck")
+
+            builder.setPositiveButton("Ight", null)
+
+
+            //Create the alertDialog
+            val alertDialog: AlertDialog = builder.create()
+
+            //set other dialog properties
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+
+        //6
+        square6.setOnClickListener {
+
+            if(player1Turn) {
+                player1[6] = 6;
+                square6.text = "O"
+            } else {
+                player2[6] = 6;
+                square6.text = "x"
+            }
+
+            player1Turn = !player1Turn;
+
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle("console.log.alert")
+
+            Toast.makeText(this@MainActivity, "$player1", Toast.LENGTH_LONG).show()
+
+            builder.setMessage(Arrays.toString(player1))
+
+            builder.setPositiveButton("Ight", null)
+
+
+            //Create the alertDialog
+            val alertDialog: AlertDialog = builder.create()
+
+            //set other dialog properties
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+
+        //7
+        square7.setOnClickListener {
+
+            if(player1Turn) {
+                player1[7] = 7;
+                square7.text = "O"
+            } else {
+                player2[7] = 7;
+                square7.text = "x"
+            }
+
+            player1Turn = !player1Turn;
+
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle("console.log.alert")
+
+            Toast.makeText(this@MainActivity, "$player1", Toast.LENGTH_LONG).show()
+
+            builder.setMessage(Arrays.toString(player1))
+
+            builder.setPositiveButton("Ight", null)
+
+
+            //Create the alertDialog
+            val alertDialog: AlertDialog = builder.create()
+
+            //set other dialog properties
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+
+        //8
+        square8.setOnClickListener {
+
+            if(player1Turn) {
+                player1[8] = 8;
+                square8.text = "O"
+            } else {
+                player2[8] = 8;
+                square8.text = "x"
+            }
+
+            player1Turn = !player1Turn;
+
+            val builder = AlertDialog.Builder(this)
+
+            builder.setTitle("console.log.alert")
+
+            Toast.makeText(this@MainActivity, "$player1", Toast.LENGTH_LONG).show()
+
+            builder.setMessage(Arrays.toString(player1))
+
+            builder.setPositiveButton("Ight", null)
+
+
+            //Create the alertDialog
+            val alertDialog: AlertDialog = builder.create()
+
+            //set other dialog properties
+            alertDialog.setCancelable(false)
+            alertDialog.show()
+        }
+
+//        button.setOnClickListener {
+//            val builder = AlertDialog.Builder(this)
+//
+//            player1Turn = !player1Turn;
+//
+//            builder.setTitle("console.log.alert")
+//
+//            Toast.makeText(this@MainActivity, "awefsdgadf", Toast.LENGTH_LONG).show()
+//
+//            builder.setMessage("$player1Turn")
+//
+//            builder.setPositiveButton("Ight", null)
+//
+//            //Create the alertDialog
+//            val alertDialog: AlertDialog = builder.create()
+//
+//            //set other dialog properties
+//            alertDialog.setCancelable(false)
+//            alertDialog.show()
+//        }
 
     }
 }
