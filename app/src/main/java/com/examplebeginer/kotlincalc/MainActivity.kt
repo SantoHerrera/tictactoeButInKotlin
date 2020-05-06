@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
         val square7 = findViewById<Button>(R.id.B7)
         val square8 = findViewById<Button>(R.id.B8)
 
-        var player1 = arrayOfNulls<Int>(5)
-        var player2 = arrayOfNulls<Int>(5)
+        var player1 = arrayOfNulls<Int>(55)
+        var player2 = arrayOfNulls<Int>(55)
 
         square0.setOnClickListener {
 
