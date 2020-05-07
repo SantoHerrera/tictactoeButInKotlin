@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var player1Turn = false;
+        var player1Turn = true;
 
         //val button = findViewById(R.id.theOnlyButton)
         val button = findViewById<Button>(R.id.onlyButton)
@@ -42,16 +42,16 @@ class MainActivity : AppCompatActivity() {
 
         square0.setOnClickListener {
 
-
-            if(player1Turn) {
-                player1[0] = 0;
-                square0.text = "O"
-            } else {
-                player2[0] = 0;
-                square0.text = "x"
+            if(square0.text == "") {
+                if (player1Turn) {
+                    player1[0] = 0;
+                    square0.text = "O"
+                } else {
+                    player2[0] = 0;
+                    square0.text = "x"
+                }
+                player1Turn = !player1Turn;
             }
-
-            player1Turn = !player1Turn;
 
             val builder = AlertDialog.Builder(this)
 
@@ -75,6 +75,17 @@ class MainActivity : AppCompatActivity() {
         square1.setOnClickListener {
             val builder = AlertDialog.Builder(this)
 
+            if(square1.text == "") { // if it hasnt been clicked
+                if (player1Turn) {
+                    player1[1] = 1;
+                    square1.text = "O"
+                } else {
+                    player2[1] = 1;
+                    square1.text = "x"
+                }
+                player1Turn = !player1Turn;
+            }
+
             builder.setTitle("console.log.alert")
 
             Toast.makeText(this@MainActivity, "AWEF", Toast.LENGTH_LONG).show()
@@ -95,6 +106,17 @@ class MainActivity : AppCompatActivity() {
         square2.setOnClickListener {
             val builder = AlertDialog.Builder(this)
 
+            if(square2.text == "") {
+                if (player1Turn) {
+                    player1[2] = 2;
+                    square2.text = "O"
+                } else {
+                    player2[2] = 2;
+                    square2.text = "x"
+                }
+                player1Turn = !player1Turn;
+            }
+
             builder.setTitle("console.log.alert")
 
             Toast.makeText(this@MainActivity, "AWEF", Toast.LENGTH_LONG).show()
@@ -114,16 +136,16 @@ class MainActivity : AppCompatActivity() {
 
         //3
         square3.setOnClickListener {
-
-            if(player1Turn) {
-                player1[3] = 3;
-                square3.text = "O"
-            } else {
-                player2[3] = 3;
-                square3.text = "x"
+            if(square3.text == "") {
+                if (player1Turn) {
+                    player1[3] = 3;
+                    square3.text = "O"
+                } else {
+                    player2[3] = 3;
+                    square3.text = "x"
+                }
+                player1Turn = !player1Turn;
             }
-
-            player1Turn = !player1Turn;
 
             val builder = AlertDialog.Builder(this)
 
@@ -146,16 +168,16 @@ class MainActivity : AppCompatActivity() {
 
         //4
         square4.setOnClickListener {
-
-            if(player1Turn) {
-                player1[4] = 4;
-                square4.text = "O"
-            } else {
-                player2[4] = 4;
-                square4.text = "x"
+            if(square4.text == "") {
+                if (player1Turn) {
+                    player1[4] = 4;
+                    square4.text = "O"
+                } else {
+                    player2[4] = 4;
+                    square4.text = "x"
+                }
+                player1Turn = !player1Turn;
             }
-
-            player1Turn = !player1Turn;
 
             val builder = AlertDialog.Builder(this)
 
@@ -177,18 +199,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         //5
-        //error onclick
         square5.setOnClickListener {
-
-            if(player1Turn) {
-                player1[5] = 5;
-                square5.text = "O"
-            } else {
-                player2[5] = 5;
-                square5.text = "x"
+            if(square5.text == "") {
+                if (player1Turn) {
+                    player1[5] = 5;
+                    square5.text = "O"
+                } else {
+                    player2[5] = 5;
+                    square5.text = "x"
+                }
+                player1Turn = !player1Turn;
             }
-
-            player1Turn = !player1Turn;
 
             val builder = AlertDialog.Builder(this)
 
@@ -211,16 +232,16 @@ class MainActivity : AppCompatActivity() {
 
         //6
         square6.setOnClickListener {
-
-            if(player1Turn) {
-                player1[6] = 6;
-                square6.text = "O"
-            } else {
-                player2[6] = 6;
-                square6.text = "x"
+            if(square6.text == "") {
+                if (player1Turn) {
+                    player1[6] = 6;
+                    square6.text = "O"
+                } else {
+                    player2[6] = 6;
+                    square6.text = "x"
+                }
+                player1Turn = !player1Turn;
             }
-
-            player1Turn = !player1Turn;
 
             val builder = AlertDialog.Builder(this)
 
@@ -243,16 +264,16 @@ class MainActivity : AppCompatActivity() {
 
         //7
         square7.setOnClickListener {
-
-            if(player1Turn) {
-                player1[7] = 7;
-                square7.text = "O"
-            } else {
-                player2[7] = 7;
-                square7.text = "x"
+            if(square7.text == "") {
+                if (player1Turn) {
+                    player1[7] = 7;
+                    square7.text = "O"
+                } else {
+                    player2[7] = 7;
+                    square7.text = "x"
+                }
+                player1Turn = !player1Turn;
             }
-
-            player1Turn = !player1Turn;
 
             val builder = AlertDialog.Builder(this)
 
@@ -275,16 +296,17 @@ class MainActivity : AppCompatActivity() {
 
         //8
         square8.setOnClickListener {
-
-            if(player1Turn) {
-                player1[8] = 8;
-                square8.text = "O"
-            } else {
-                player2[8] = 8;
-                square8.text = "x"
+            if(square8.text == "") {
+                if (player1Turn) {
+                    player1[8] = 8;
+                    square8.text = "O"
+                } else {
+                    player2[8] = 8;
+                    square8.text = "x"
+                }
+                player1Turn = !player1Turn;
             }
 
-            player1Turn = !player1Turn;
 
             val builder = AlertDialog.Builder(this)
 
